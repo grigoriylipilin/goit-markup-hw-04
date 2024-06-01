@@ -50,6 +50,7 @@ img {
 
 .hero {
     background-color: #2e2f42;
+    max-width: 1440px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -98,7 +99,7 @@ img {
 
 .hero-button:hover, .hero-button:focus {
     background-color: #404BBF;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation {
@@ -152,12 +153,19 @@ img {
     background-color: #404bbf;
     /* color of the underline */
     position: absolute;
+    border-radius: 2px;
     left: 0;
     bottom: -1px;
 }
 
+.link-studio {
+    color: #404bbf;
+
+}
+
 .nav-link:active { 
         color: #404bbf;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address {
@@ -182,7 +190,7 @@ img {
 .address-link:hover, .address-link:focus,
 .nav-link:hover, .nav-link:focus {
     color: #404bbf;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*------- EXELLENS ----------*/
 .visual-hidden {
@@ -226,6 +234,9 @@ img {
 }
 
 .exellens-container-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #8e8f99;
     border-radius: 4px;
     width: 264px;
@@ -304,6 +315,21 @@ img {
     gap: 24px;
 }
 
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon {
+    fill: #f4f4fd;
+}
+
 .item {
     display: block;
     align-items: center;
@@ -314,10 +340,9 @@ img {
     background-color: #4d5ae5;
 }
 
-.item:hover {
+.link:hover, .link:focus {
     background-color: #404bbf;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 /*--------------------- TEAM -----------------*/
 
@@ -348,8 +373,7 @@ img {
 
 .portfolio-list {
     width: calc((100% - 48px) / 3);
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-    background: #fff;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-div {
@@ -459,13 +483,27 @@ p, .exellens-text, .team-title,
 }
 
 .footer-text {
-        color: #f4f4fd;
+        font-weight: 500;
+        color: #FFFFFF;
         width: 264px;
 }
 
 .footer-container {
     display: flex;
     align-items: baseline;
+}
+
+.link-footer {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
 }
 
 .footer-main-container {
@@ -480,19 +518,16 @@ p, .exellens-text, .team-title,
     gap: 16px;
 }
 
-.item-footer {
-    display: block;
-    align-items: center;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    padding: 8px;
-    background-color: #4d5ae5;
+.icon-footer {
+    fill: #f4f4fd;
 }
 
-.item-footer:hover {
+.item-footer {
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-footer:hover, .link-footer:focus {
     background-color: #31d0aa;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-text-media {
